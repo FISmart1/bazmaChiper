@@ -140,3 +140,21 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
+.Awal {
+  margin: auto;
+  margin-top: 20%;
+}
+
+.btn-link {
+  background-color: orange;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-link:hover {
+  background-color: orange;
+  color: white;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
