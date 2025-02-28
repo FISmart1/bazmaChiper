@@ -12,12 +12,9 @@ body {
 }
 
 .container-fluid {
-  gap: 63%;
+  gap: 60%;
 }
 
-.mavbar .navbar-brand {
-  margin-right: 10%;
-}
 
 .d-flex img:hover {
   transform: scale(1.1);

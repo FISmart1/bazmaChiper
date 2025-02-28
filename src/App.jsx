@@ -22,9 +22,9 @@ export default function App() {
     </button>
 
     <div className="collapse navbar-collapse w-100" id="navbarNav">
-      <ul className="navbar-nav gap-3 w-100 ">
+      <ul className="navbar-nav gap-2 w-100 ">
         <li className="nav-item">
-          <Link className="nav-link" to="/caesar">Caesar Cipher</Link>
+          <Link className="nav-link" to="/chiper">Caesar Cipher</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/vigenere">Vigenere</Link>
@@ -34,6 +34,9 @@ export default function App() {
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/hill">Hill Cipher</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/team">Team Developer</Link>
         </li>
       </ul>
     </div>
