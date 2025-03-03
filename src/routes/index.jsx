@@ -6,6 +6,9 @@ import CaesarCipherView from "../views/CaesarChiperView";
 import VigenereView from "../views/VigenereView";
 import Rot18View from "../views/Rot18View";
 import HillCipherView from "../views/HillCipherView"
+import Awal from "../views/dahboards/awal"
+
+import CaesarCipher from "../views/home/index"
 
 export default function AppRoutes() {
     return (
@@ -15,6 +18,7 @@ export default function AppRoutes() {
             <Route path="/vigenere" element={<VigenereView />} />
             <Route path="/rot18" element={<Rot18View />} />
             <Route path="/hill" element={<HillCipherView  />} />
+            <Route path="/" element={<Awal />} />
 
         </Routes>
     );

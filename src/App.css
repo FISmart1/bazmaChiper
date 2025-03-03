@@ -139,4 +139,13 @@ footer {
   padding: 10px;
 }
 
+.Awal {
+  margin: auto;
+  margin-top: 20%;
+}
 
+.btn-link {
+  background-color: orange;
+  text-decoration: none;
+  color: white;
+}
