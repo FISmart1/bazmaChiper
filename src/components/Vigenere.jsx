@@ -1,28 +1,35 @@
 import { useState } from "react";
 
-export default function CaesarCipher() {
+export default function VigenereCipher() {
     const [mode, setMode] = useState("encrypt");
     const [text, setText] = useState("");
-    const [shift, setShift] = useState(3);
+    const [key, setKey] = useState("KEY");
     const [result, setResult] = useState("");
 
-    function caesarCipher(text, shift, mode) {
+    function vigenereCipher(text, key, mode) {
         let result = "";
+        let keyIndex = 0;
+        let keyLength = key.length;
+
         for (let i = 0; i < text.length; i++) {
             let c = text[i];
             let code = text.charCodeAt(i);
+            let keyChar = key[keyIndex % keyLength].toUpperCase();
+            let keyShift = keyChar.charCodeAt(0) - 65;
 
             if (code >= 65 && code <= 90) { // Huruf besar (A-Z)
                 let newCode = mode === "encrypt"
-                    ? ((code - 65 + shift) % 26) + 65
-                    : ((code - 65 - shift + 26) % 26) + 65;
+                    ? ((code - 65 + keyShift) % 26) + 65
+                    : ((code - 65 - keyShift + 26) % 26) + 65;
                 result += String.fromCharCode(newCode);
+                keyIndex++;
             }
             else if (code >= 97 && code <= 122) { // Huruf kecil (a-z)
                 let newCode = mode === "encrypt"
-                    ? ((code - 97 + shift) % 26) + 97
-                    : ((code - 97 - shift + 26) % 26) + 97;
+                    ? ((code - 97 + keyShift) % 26) + 97
+                    : ((code - 97 - keyShift + 26) % 26) + 97;
                 result += String.fromCharCode(newCode);
+                keyIndex++;
             }
             else { // Karakter lain tidak berubah
                 result += c;
@@ -31,17 +38,17 @@ export default function CaesarCipher() {
         return result;
     }
 
-    function updateCipher(newText, newShift, newMode) {
-        setResult(caesarCipher(newText, newShift, newMode));
+    function updateCipher(newText, newKey, newMode) {
+        setResult(vigenereCipher(newText, newKey, newMode));
     }
 
     return (
         <div className="container">
-            <h2 className="text-black">Bazma <span style={{ color: "orange" }}>Chiper</span></h2>
-            <p className="text-black">Selamat datang di Bazma Chiper, silahkan pilih menu yang tersedia.</p>
+            <h2 className="text-black">Bazma <span style={{ color: "orange" }}>Cipher</span></h2>
+            <p className="text-black">Selamat datang di Bazma Cipher, silahkan pilih menu yang tersedia.</p>
             <br />
             <div className="container form">
-                <h1>Caesar Cipher</h1>
+                <h1>Vigenère Cipher</h1>
                 <br />
 
                 <label htmlFor="mode">Mode:</label>
@@ -51,7 +58,7 @@ export default function CaesarCipher() {
                     value={mode} 
                     onChange={(e) => {
                         setMode(e.target.value);
-                        updateCipher(text, shift, e.target.value);
+                        updateCipher(text, key, e.target.value);
                     }}
                 >
                     <option value="encrypt">Enkripsi</option>
@@ -66,20 +73,19 @@ export default function CaesarCipher() {
                     value={text} 
                     onChange={(e) => {
                         setText(e.target.value);
-                        updateCipher(e.target.value, shift, mode);
+                        updateCipher(e.target.value, key, mode);
                     }}
                 />
-
-                <label htmlFor="shift">Kunci (Geser): <span>{shift}</span></label>
+                
+                <label htmlFor="key">Masukkan Kunci:</label>
                 <input 
-                    type="range" 
-                    id="shift" 
-                    min="1" 
-                    max="70" 
-                    value={shift} 
+                    type="text" 
+                    id="key" 
+                    placeholder="Masukkan kunci..." 
+                    value={key} 
                     onChange={(e) => {
-                        setShift(Number(e.target.value));
-                        updateCipher(text, Number(e.target.value), mode);
+                        setKey(e.target.value.toUpperCase());
+                        updateCipher(text, e.target.value.toUpperCase(), mode);
                     }} 
                 />
 

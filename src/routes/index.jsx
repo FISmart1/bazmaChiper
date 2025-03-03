@@ -1,14 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import CaesarCipher from "../views/home/index"
+import CaesarCipherView from "../views/CaesarChiperView";
+import VigenereView from "../views/VigenereView";
+import Rot18View from "../views/Rot18View";
+import HillCipherView from "../views/HillCipherView"
 
 export default function AppRoutes() {
     return (
         <Routes>
             {/* route "/" */}
-            <Route path="/" element={<CaesarCipher />} />
+            <Route path="/caesar" element={<CaesarCipherView />} />
+            <Route path="/vigenere" element={<VigenereView />} />
+            <Route path="/rot18" element={<Rot18View />} />
+            <Route path="/hill" element={<HillCipherView  />} />
 
         </Routes>
     );

@@ -8,11 +8,13 @@ body {
 
 .navbar {
   margin-bottom: 2%;
-  padding: 10px 25px 10px ;
+  padding: 10px 25px 10px;
 }
-
 .container-fluid {
   gap: 63%;
+}
+.active-nav {
+  color: orange !important;
 }
 
 .mavbar .navbar-brand {
@@ -24,13 +26,12 @@ body {
   transition: 0.5s;
 }
 
-ul li a{
+ul li a {
   color: black;
 }
 
 .navbar ul li a:hover {
   color: orange;
-  transform: scale(1.3);
   transition: 0.5s;
 }
 
@@ -44,7 +45,6 @@ ul li a{
   margin-bottom: 2%;
 }
 
-
 .form {
   background: #ffffff;
   padding: 20px;
@@ -56,7 +56,7 @@ ul li a{
 
 select {
   background-color: white;
-  padding: 5px 10px ;
+  padding: 5px 10px;
   border-radius: 5px;
   margin: auto;
 }
@@ -69,7 +69,7 @@ textarea {
   font-size: 16px;
   border-radius: 5px;
   border: none;
-  background-color:orange;
+  background-color: orange;
   color: white;
 }
 
@@ -78,7 +78,6 @@ textarea::placeholder {
 }
 
 textarea:focus {
-  transform: scale(1.1);
   transition: 0.5s;
 }
 
@@ -88,7 +87,7 @@ input[type="range"] {
   appearance: none;
   width: 100%;
   height: 8px;
-  background: #ff0000; /* Warna jalur slider */
+  background: orange; /* Warna jalur slider */
   border-radius: 4px;
   outline: none;
   cursor: pointer;
@@ -121,7 +120,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
   background: #ffffff; /* Warna saat hover */
 }
 
-
 .result {
   font-size: 20px;
   font-weight: bold;
@@ -140,3 +138,5 @@ footer {
   text-align: center;
   padding: 10px;
 }
+
+
