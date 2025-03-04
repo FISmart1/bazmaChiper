@@ -217,3 +217,16 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.1);
 }
 
+/*Hill chiper*/
+.btn-calculate {
+  background-color: orange;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.btn-calculate:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}

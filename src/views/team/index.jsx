@@ -1,5 +1,6 @@
 import  yusuf2  from "../../assets/yusuf2.png";
 import  berke  from "../../assets/berke.png";
+import  pa  from "../../assets/pa.png";
 
 export default function Team() {
     return (
@@ -17,7 +18,7 @@ export default function Team() {
         <div className="col-4 card" style={{ width: "18rem" }}>
             <div className="judul">Guru Pembimbing</div>
             <div className="img-container">
-                <img src={berke} alt="Qiageng Berke Jaiyurrahman" className="img-fluid" />
+                <img src={pa} alt="Qiageng Berke Jaiyurrahman" className="img-fluid" />
             </div>
             <div className="card-body">
                 <p>Luthfi Abdurrahman S.Pd</p>
