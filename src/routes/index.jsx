@@ -9,6 +9,8 @@ import HillCipher from "../views/home/hill"
 
 import ROT18Cipher from "../views/home/rot"
 
+import VigenereCipher from "../views/home/vigenere"
+
 import CaesarCipher from "../views/home/index"
 
 export default function AppRoutes() {
@@ -23,6 +25,8 @@ export default function AppRoutes() {
             <Route path="/hill" element={<HillCipher />} />
 
             <Route path="/rot18" element={<ROT18Cipher/>}/>
+
+            <Route path="/vigenere" element={<VigenereCipher/>}/>
 
             <Route path="/team" element={<Team />} />
 
