@@ -37,8 +37,8 @@ export default function CaesarCipher() {
 
     return (
         <div className="container">
-            <h2 className="text-black">Bazma <span style={{ color: "orange" }}>Chiper</span></h2>
-            <p className="text-black">Selamat datang di Bazma Chiper, silahkan pilih menu yang tersedia.</p>
+            <h2 className="text-black">Bazma <span style={{ color: "orange" }}>Cipher</span></h2>
+            <p className="text-black">Selamat datang di Bazma Cipher, silahkan pilih menu yang tersedia.</p>
             <br />
             <div className="container form">
                 <h1>Caesar Cipher</h1>
@@ -75,7 +75,7 @@ export default function CaesarCipher() {
                     type="range" 
                     id="shift" 
                     min="1" 
-                    max="70" 
+                    max="25" 
                     value={shift} 
                     onChange={(e) => {
                         setShift(Number(e.target.value));

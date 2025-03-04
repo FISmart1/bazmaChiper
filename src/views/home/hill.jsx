@@ -138,8 +138,8 @@ export default function HillCipher() {
 
     return (
         <div className="container">
-            <h2 className="text-black">Bazma <span style={{ color: "orange" }}>Chiper</span></h2>
-            <p className="text-black">Selamat datang di Bazma Chiper, silahkan pilih menu yang tersedia.</p>
+            <h2 className="text-black">Bazma <span style={{ color: "orange" }}>Cipher</span></h2>
+            <p className="text-black">Selamat datang di Bazma Cipher, silahkan pilih menu yang tersedia.</p>
             <br />
             <div className="container form">
                 <h1>Hill Cipher</h1>
