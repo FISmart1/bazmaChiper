@@ -16,6 +16,7 @@ body {
 .navbar {
   margin-bottom: 2%;
   padding: 10px 25px 10px ;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .container-fluid {
