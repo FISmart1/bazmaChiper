@@ -110,7 +110,7 @@ export default function HillCipher() {
         if (mode === "encrypt") {
             return multiplyMatrix(keyMatrix, text);
         } else {
-            const size = keyMatrix.length;
+            const size = keyMatrix.length();
             const det = calculateDeterminant(keyMatrix);
             const detInv = modInverse(det, 26);
 
